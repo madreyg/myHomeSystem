@@ -4,12 +4,14 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"shopping/router"
 )
 
 func main() {
-	http.HandleFunc("/", handler)
-	http.ListenAndServe(":8080", nil)
-	log.Println("start project ")
+	//http.HandleFunc("/", handler)
+	rout := router.InitRouting()
+	log.Println("Start HomeSystem")
+	http.ListenAndServe(":8080", rout)
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
