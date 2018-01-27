@@ -19,3 +19,4 @@ type ShopProduct struct {
 	Photo        string
 	Shoplist     shoplist.Shoplist
 }
+
